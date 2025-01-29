@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-pink{
+    position: relative;
+    color: white;
+    background-color: #e84949;
+    padding: 0.8rem 2.3rem;
+    font-size: 18px;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    z-index: 1;
+    
+}
+.btn-pink::after{
+    content: "";
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s  ;
+    z-index: -1;
+    
+
+}
+.btn-pink:hover::after{
+    transform: scaleX(1);
+    width: 100%;
+    
+
+}
+
